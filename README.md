@@ -282,3 +282,74 @@ Represents the use of Secure Shell (SSH) for remote access to a system.
 
 Represents scanning systems to identify available network services and
 potential attack surfaces.
+
+## 🔍 Findings
+
+The SOC lab demonstrated how security monitoring tools can detect,
+analyze, and investigate common security events in a controlled
+environment.
+
+### Key Findings
+
+- SSH authentication attempts from an unauthorized source were detected
+  by Wazuh.
+- Wazuh successfully identified authentication activity using the
+  `sshd` decoder and generated a security alert.
+- Network reconnaissance using Nmap identified exposed ports and
+  services on lab systems.
+- Windows 7 exposed SMB over TCP port `445`, demonstrating the risks
+  associated with legacy systems and exposed network services.
+- File Integrity Monitoring can be used to detect unauthorized changes
+  to monitored files.
+- Security events can be investigated using source IP addresses,
+  timestamps, affected systems, alert severity, and detection rules.
+- MITRE ATT&CK mapping provides useful context for understanding the
+  behavior represented by security alerts.
+- Centralized monitoring improves visibility across multiple endpoints.
+
+### Overall Assessment
+
+The lab successfully demonstrated a basic SOC workflow from security
+event generation through detection, investigation, MITRE ATT&CK mapping,
+and recommended response actions.
+
+## 🛠️ Remediation
+
+Based on the security events observed during the lab, the following
+security improvements are recommended.
+
+### Authentication Security
+
+- Use strong and unique passwords.
+- Disable unnecessary user accounts.
+- Implement account lockout or rate-limiting controls.
+- Consider using SSH key-based authentication instead of passwords.
+- Restrict SSH access to trusted systems where possible.
+
+### Network Security
+
+- Restrict unnecessary open ports and services.
+- Apply firewall rules to limit unauthorized network access.
+- Segment critical systems from untrusted networks.
+- Monitor network reconnaissance and suspicious connection attempts.
+
+### Windows Security
+
+- Disable SMB services when they are not required.
+- Restrict access to TCP port `445`.
+- Avoid using legacy operating systems such as Windows 7 in production.
+- Apply security patches and security updates.
+
+### File Integrity Monitoring
+
+- Monitor critical system and configuration files.
+- Investigate unexpected file creation, modification, or deletion.
+- Review FIM alerts for signs of unauthorized activity.
+
+### SOC Monitoring
+
+- Continuously monitor security alerts.
+- Investigate high-severity events promptly.
+- Correlate related events across endpoints.
+- Maintain documented incident response procedures.
+- Regularly review and improve detection rules.
