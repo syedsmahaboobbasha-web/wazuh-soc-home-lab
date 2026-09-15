@@ -215,19 +215,19 @@ For the SSH authentication scenario, the primary log source was:
 
 Review the Wazuh detection information:
 
-Decoder
-Rule ID
-Rule description
-Alert level
-MITRE ATT&CK technique
+- Decoder
+- Rule ID
+- Rule description
+- Alert level
+- MITRE ATT&CK technique
 ### 5. Scope Analysis
 
 Determine whether the activity affected:
 
-A single endpoint
-Multiple endpoints
-Multiple user accounts
-Multiple services
+- A single endpoint
+- Multiple endpoints
+- Multiple user accounts
+- Multiple services
 ### 6. MITRE ATT&CK Mapping
 
 Map the observed behavior to the appropriate MITRE ATT&CK technique
@@ -237,21 +237,21 @@ to understand the adversary behavior represented by the alert.
 
 Recommended response actions may include:
 
-Blocking malicious source IP addresses
-Resetting compromised credentials
-Disabling compromised accounts
-Restricting unnecessary services
-Applying security patches
-Reviewing related security events
+- Blocking malicious source IP addresses
+- Resetting compromised credentials
+- Disabling compromised accounts
+- Restricting unnecessary services
+- Applying security patches
+- Reviewing related security events
 ### 8. Documentation
 
 Document the investigation including:
 
-Incident summary
-Timeline
-Indicators
-Evidence
-Detection details
-Investigation findings
-Response actions
-Remediation recommendations
+- Incident summary
+- Timeline
+- Indicators
+- Evidence
+- Detection details
+- Investigation findings
+- Response actions
+- Remediation recommendations
