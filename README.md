@@ -80,3 +80,43 @@ Ubuntu Splunk Server
 192.168.132.133
     │
     └── Additional SIEM / Log Analysis
+
+```
+## 🧰 Technologies Used
+
+### Security Tools
+
+- Wazuh
+- Splunk Enterprise
+- Kali Linux
+- Nmap
+- Hydra
+- Metasploit
+- tcpdump
+
+### Operating Systems
+
+- Ubuntu Server
+- Ubuntu Linux
+- Windows 7
+- Kali Linux
+
+### Virtualization
+
+- VMware Workstation Pro
+
+### Security Framework
+
+- MITRE ATT&CK
+
+### Security Concepts
+
+- Security Operations Center (SOC)
+- SIEM
+- Log Analysis
+- Threat Detection
+- Incident Response
+- Network Reconnaissance
+- Authentication Monitoring
+- File Integrity Monitoring
+- Malware Detection
