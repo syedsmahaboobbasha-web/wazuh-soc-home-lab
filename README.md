@@ -379,3 +379,31 @@ Key observed alerts include:
 - SSH brute-force attempts — Rule ID `5712`
 - Maximum authentication attempts exceeded — Rule ID `5758`
 - Multiple failed logins — Rule ID `5551`
+
+
+## 🎯 Conclusion
+
+This SOC home lab provided hands-on experience with security monitoring,
+attack simulation, alert investigation, log analysis, and incident
+response using Wazuh.
+
+The project demonstrates the workflow of a SOC analyst:
+
+**Monitor → Detect → Investigate → Analyze → Map → Respond → Document**
+
+The lab also provided practical experience with authentication attacks,
+network reconnaissance, exposed services, File Integrity Monitoring,
+security alert analysis, and MITRE ATT&CK mapping.
+
+This project helped develop practical skills relevant to a
+Security Operations Center (SOC) Level 1 role.
+
+---
+
+## ⚠️ Disclaimer
+
+All security testing and attack simulations described in this project
+were performed in an isolated, authorized home lab environment for
+educational and cybersecurity training purposes.
+
+No unauthorized systems or networks were targeted.
