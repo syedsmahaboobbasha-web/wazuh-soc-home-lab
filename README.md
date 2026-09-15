@@ -113,6 +113,62 @@ Ubuntu Splunk Server
 
 - Security Operations Center (SOC)
 - SIEM
+
+## 🚨 Detection Scenarios
+
+This lab was used to simulate controlled security events and investigate
+the resulting alerts using Wazuh.
+
+### 1. SSH Authentication Attack
+
+A controlled SSH authentication attack was performed from the Kali Linux
+machine against the Ubuntu Wazuh agent.
+
+**Source:** `192.168.132.128` (Kali Linux)
+
+**Target:** `192.168.132.131` (Ubuntu Agent)
+
+**Log Source:**
+
+```text
+/var/log/auth.log
+
+```
+
+**Wazuh Detection:**
+
+- Decoder: `sshd`
+- Rule ID: `5710`
+- Alert Level: `5`
+- Detection: Attempt to login using a non-existent user
+
+**MITRE ATT&CK:**
+
+- `T1110.001` — Password Guessing
+- `T1021.004` — SSH
+
+The alert was investigated by reviewing the source IP, target endpoint,
+username, timestamp, decoder, rule ID, severity, and underlying
+authentication log.
+
+---
+
+### 2. Network Reconnaissance
+
+Nmap was used from the Kali Linux machine to perform controlled network
+reconnaissance against systems inside the lab.
+
+The scan was used to identify:
+
+- Open ports
+- Running services
+- Service versions
+- Potential attack surface
+
+Example:
+
+```bash
+nmap -sV <TARGET-IP>
 - Log Analysis
 - Threat Detection
 - Incident Response
