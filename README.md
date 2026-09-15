@@ -22,3 +22,61 @@ The project focuses on:
 - Alert investigation
 - Incident response
 - Security documentation
+
+## 🏗️ Lab Architecture
+
+The SOC home lab was built using VMware Workstation Pro with multiple
+virtual machines representing an attacker, monitored endpoints, and
+centralized security monitoring infrastructure.
+
+### Virtual Machines
+
+| Machine | Role | IP Address |
+|---|---|---|
+| Kali Linux | Attacker / Security Testing | 192.168.132.128 |
+| Ubuntu Wazuh Server | SIEM / Security Monitoring | 192.168.132.130 |
+| Ubuntu Agent | Monitored Linux Endpoint | 192.168.132.131 |
+| Windows 7 | Monitored Windows Endpoint | 192.168.132.132 |
+| Ubuntu Splunk Server | Log Analysis / SIEM | 192.168.132.133 |
+
+### Security Monitoring Flow
+
+```text
+Kali Linux
+Attacker
+    │
+    │ Attack / Reconnaissance
+    ▼
+┌─────────────────────┐
+│ Ubuntu Agent        │
+│ 192.168.132.131     │
+└──────────┬──────────┘
+           │
+           │ Security Events
+           ▼
+┌─────────────────────┐
+│ Wazuh Server        │
+│ 192.168.132.130     │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Wazuh Indexer       │
+│ Log Storage         │
+└──────────┬──────────┘
+           │
+           ▼
+┌─────────────────────┐
+│ Wazuh Dashboard     │
+│ Alert Investigation │
+└─────────────────────┘
+
+Windows 7
+192.168.132.132
+    │
+    └── Security Events
+
+Ubuntu Splunk Server
+192.168.132.133
+    │
+    └── Additional SIEM / Log Analysis
