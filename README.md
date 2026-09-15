@@ -255,3 +255,30 @@ Document the investigation including:
 - Investigation findings
 - Response actions
 - Remediation recommendations
+
+## 🗺️ MITRE ATT&CK Mapping
+
+The security events observed during the lab were mapped to relevant
+MITRE ATT&CK techniques based on the behavior detected.
+
+| Attack / Activity | MITRE ATT&CK Technique | Technique ID |
+|---|---|---|
+| SSH password guessing | Brute Force: Password Guessing | T1110.001 |
+| SSH remote access | Remote Services: SSH | T1021.004 |
+| Network reconnaissance using Nmap | Network Service Scanning | T1046 |
+
+### Technique Descriptions
+
+**T1110.001 — Password Guessing**
+
+Represents attempts to gain access by repeatedly guessing or testing
+passwords against an account.
+
+**T1021.004 — SSH**
+
+Represents the use of Secure Shell (SSH) for remote access to a system.
+
+**T1046 — Network Service Scanning**
+
+Represents scanning systems to identify available network services and
+potential attack surfaces.
