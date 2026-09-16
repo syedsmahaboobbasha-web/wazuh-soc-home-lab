@@ -113,6 +113,13 @@ Ubuntu Splunk Server
 
 - Security Operations Center (SOC)
 - SIEM
+- Log Analysis
+- Threat Detection
+- Incident Response
+- Network Reconnaissance
+- Authentication Monitoring
+- File Integrity Monitoring
+- Malware Detection
 
 ## 🚨 Detection Scenarios
 
@@ -169,15 +176,58 @@ Example:
 
 ```bash
 nmap -sV <TARGET-IP>
-- Log Analysis
-- Threat Detection
-- Incident Response
-- Network Reconnaissance
-- Authentication Monitoring
-- File Integrity Monitoring
-- Malware Detection
+
 
 ```
+
+---
+
+### 3. Windows SMB Security Testing
+
+The Windows 7 target was assessed for exposed network services.
+
+TCP port `445` was identified as open and associated with the SMB
+service.
+
+A controlled authentication test was performed against the Windows 7
+lab system.
+
+This scenario demonstrates the security risks associated with:
+
+- Weak credentials
+- Exposed SMB services
+- Legacy operating systems
+- Insufficient network segmentation
+
+---
+
+### 4. File Integrity Monitoring
+
+Wazuh File Integrity Monitoring (FIM) was used to monitor important
+files and identify changes.
+
+The monitoring scenario focused on detecting:
+
+- File creation
+- File modification
+- File deletion
+- Changes to monitored files
+
+---
+
+### 5. Safe Malware Simulation
+
+A controlled malware-simulation/test alert was used to demonstrate how
+security monitoring can identify suspicious activity without deploying
+real malware.
+
+The purpose of this scenario was to practice:
+
+- Alert triage
+- Event investigation
+- Detection analysis
+- MITRE ATT&CK mapping
+- Incident response
 
 ## 🔎 Investigation Process
 
