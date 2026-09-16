@@ -199,6 +199,37 @@ This scenario demonstrates the security risks associated with:
 - Legacy operating systems
 - Insufficient network segmentation
 
+A controlled SMB password-guessing test was performed from the Kali Linux
+attacker machine against the Windows 7 lab endpoint using Hydra.
+
+**Source:** `192.168.132.128` (Kali Linux)
+
+**Target:** `192.168.132.132` (Windows 7)
+
+**Protocol:** SMB
+
+**Target Port:** `445`
+
+**Tool:** Hydra
+
+The test generated multiple Windows authentication failures, which were
+collected by the Wazuh agent and detected as Windows authentication
+failure events.
+
+**Wazuh Detection:**
+
+- Logon failure — Unknown user or bad password
+- Multiple Windows logon failures
+- Rule ID: `60122`
+- Rule ID: `60204`
+
+The activity was investigated using Windows Event Viewer and Wazuh
+Security Events.
+
+**MITRE ATT&CK:**
+
+- `T1110` — Brute Force
+- `T1110.001` — Password Guessing
 ---
 
 ### 4. File Integrity Monitoring
