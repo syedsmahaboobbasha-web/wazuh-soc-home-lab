@@ -431,6 +431,21 @@ Key observed alerts include:
 - Multiple failed logins — Rule ID `5551`
 
 
+### Windows 7 Network Configuration
+
+The Windows 7 endpoint used in the lab was configured with the IP address
+`192.168.132.132`.
+
+![Windows 7 IP Configuration](evidence/windows-7-vm.PNG)
+
+
+### Windows SMB Network Scan
+
+Nmap was used from Kali Linux to identify exposed services on the Windows 7
+endpoint.
+
+![Windows SMB Nmap Scan](evidence/windows-smb-nmap.png)
+
 ## 🎯 Conclusion
 
 This SOC home lab provided hands-on experience with security monitoring,
